@@ -6,7 +6,7 @@ import './Signin.css'
 async function logIn(email, password) {
     let saveStatus = "not logged in";
     let d = {email,password}
-   await fetch("http://localhost:3003/backend/api/login", {
+   await fetch("https://www.backend.oleanderschool.com/backend/api/login", {
   method: "POST",
   credentials: "include",
   headers: {
@@ -36,7 +36,7 @@ function Signin() {
     let checkLogin = 'check'
     useEffect(() => {
         async function getUser() {
-            await fetch("http://localhost:3003/backend/api/getLoggedIn",{credentials: "include"})
+            await fetch("https://www.backend.oleanderschool.com/backend/api/getLoggedIn",{credentials: "include"})
             .then(d => d.json())
             .then(d => {
                 console.log(d);
