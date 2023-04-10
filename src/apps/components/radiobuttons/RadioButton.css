@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+}
+
+.sofa_light_dashboard_furniturestore_components_radiobutton {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 100px;
+    position: relative;
+}
+.sofa_light_dashboard_furniturestore_components_radiobutton::after {
+    content: "Double Click.";
+    position: absolute;
+    top: -20px;
+    right: 150px;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    color: white;
+    background-color: black;
+    font-size: 10px;
+}
+.sofa_light_dashboard_furniturestore_components_radiobutton input {
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(220, 220, 220, 0.442);
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: goldenrod;
+    margin-left: 5px;
+}
+.sofa_light_dashboard_furniturestore_components_radiobutton label {
+    font-family: 'Montserrat','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    color: black;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.sofa_light_dashboard_furniturestore_components_radiobutton input:hover {
+    border: 1px solid goldenrod;
+}
+
+.sofa_light_dashboard_furniturestore_components_radiobutton input:focus {
+    outline: none;
+}

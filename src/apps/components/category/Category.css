@@ -1,0 +1,33 @@
+
+.sofa_light_dashboard_furniturestore_components_category {
+    width: 100%;
+  }
+  
+.sofa_light_dashboard_furniturestore_components_category p {
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+  }
+
+  .sizeOne {
+    font-size: 18px;
+  }
+  .sizeTwo {
+    font-size: 14px;
+  }
+
+  .sofa_light_dashboard_furniturestore_components_category ul {
+    list-style: none;
+  }
+
+  .sofa_light_dashboard_furniturestore_components_category ul li{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    cursor: pointer;
+  }
+  .sofa_light_dashboard_furniturestore_components_category ul li:hover {
+    font-weight: bolder;
+  }

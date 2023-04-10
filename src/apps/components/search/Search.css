@@ -1,0 +1,49 @@
+.sofa_light_dashboard_furniturestore_components_search {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.sofa_light_dashboard_furniturestore_components_search div {
+    width: 50px;
+    height: 100%;
+    background-color: aliceblue;
+    padding: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+}
+.sofa_light_dashboard_furniturestore_components_search div img {
+    width: 25px;
+    height: 25px; 
+}
+.sofa_light_dashboard_furniturestore_components_search input {
+    width: 250px;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+    background-color: aliceblue;
+    padding: 10px;
+    transition: all .3s ease-out;
+}
+
+.sofa_light_dashboard_furniturestore_components_search input:hover {
+    box-shadow:  0 4px 4px 0 whitesmoke;
+}
+
+.sofa_light_dashboard_furniturestore_components_search input:focus {
+    outline: none;
+    border: 1px solid wheat;
+}
+
+.sofa_light_dashboard_furniturestore_components_search:hover div {
+    box-shadow:  0 4px 4px 0 whitesmoke;
+}
+
+.sofa_light_dashboard_furniturestore_components_search:focus div {
+    outline: none;
+    border: 1px solid wheat;
+}
+

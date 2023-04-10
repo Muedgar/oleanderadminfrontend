@@ -1,0 +1,67 @@
+.sofa_light_dashboard_furniturestore_components_product {
+    width: 300px;
+    height: fit-content;
+    border-radius: 10px;
+    transition: all .3s ease-out;
+    margin: 40px;
+    cursor: pointer;
+    box-shadow: 10px 10px 20px 5px rgb(0 0 0 / 23%);
+}
+
+.sofa_light_dashboard_furniturestore_components_product .productImg {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+.sofa_light_dashboard_furniturestore_components_product .productImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.sofa_light_dashboard_furniturestore_components_product:hover {
+    box-shadow: none;
+    transform: translateX(-10px);
+}
+
+.sofa_light_dashboard_furniturestore_components_product .productDesc {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: aliceblue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.productActions {
+    display: flex;
+    flex-direction: row;
+}
+
+.sofa_light_dashboard_furniturestore_components_product .productDesc button {
+    margin: 5px;
+    width: 130px;
+    height: 35px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sofa_light_dashboard_furniturestore_components_product .productDesc button img {
+    width: 15px;
+    height: 15px;
+}
+.sofa_light_dashboard_furniturestore_components_product .productDesc button:nth-child(2) {
+    background-color: goldenrod;
+    color: white;
+    border: none;
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+}
+
+.sofa_light_dashboard_furniturestore_components_imageViewer {
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: fit-content;
+    margin: 50px auto;
+    padding: 10px;
+}
+.sofa_light_dashboard_furniturestore_components_imageViewer:hover {
+    background-color: rgba(255, 228, 196, 0.16);
+}
+.sofa_light_dashboard_furniturestore_components_imageViewer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.sofa_light_dashboard_furniturestore_components_imageViewer div img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 5px;
+}
+.sofa_light_dashboard_furniturestore_components_imageViewer img {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    align-self: center;
+}
+.sofa_light_dashboard_furniturestore_components_imageViewer p {
+    font-family: 'Montserrat','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    color: black;
+    font-size: 16px;
+}
+

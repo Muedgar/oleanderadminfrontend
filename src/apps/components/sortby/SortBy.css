@@ -1,0 +1,29 @@
+.sofa_light_dashboard_furniturestore_components_sortby {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.sofa_light_dashboard_furniturestore_components_sortby p {
+    border-radius: 15px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin: 5px;
+}
+
+.sofa_light_dashboard_furniturestore_components_sortby p span {
+    margin: 5px;
+    cursor: pointer;
+    background-color: aliceblue;
+    width: fit-content;
+    height: 20px;
+    padding: 10px;
+}
+
+.sofa_light_dashboard_furniturestore_components_sortby_active {
+    border-right: 1px solid black;
+    font-weight: bolder;
+}

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+}
+
+
+.dashboard {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.dashboard_navbar {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 0 10px 5px rgba(153, 153, 153, 0.249);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    z-index: 200;
+    background-color: white;
+}
+.dashboard_navbar .dashboard_navbar_logo_menu_position {
+    display: flex;
+    flex-direction: row;
+}
+.dashboard_navbar .dashboard_navbar_logo {
+    margin-top: 10px;
+    width: 100px;
+    height: 60px;
+    margin-left: 50px;
+}
+
+.dashboard_navbar .dashboard_navbar_menu_position {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard_navbar .dashboard_navbar_menu_button {
+    border:none;
+    margin-left: 50px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: white;
+}
+.dashboard_navbar .dashboard_navbar_menu_button:hover {
+    box-shadow: 0 0 10px 5px rgba(153, 153, 153, 0.249);
+}
+.dashboard_navbar_admin_profile_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    margin-top: 15px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.dashboard_navbar_admin_profile_menu:hover {
+    background-color: #74bc41;
+}
+.dashboard_navbar_admin_profile_menu:hover .dashboard_navbar_caret {
+    transform: rotate(0deg);
+}
+.dashboard_navbar_admin_profile_menu p {
+    font-family: 'Montserrat';
+    padding-right: 10px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+.dashboard_navbar_admin_profile_menu .dashboard_navbar_caret {
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+}
+
+.dashboard_navbar_admin_profile_img {
+    width: 15px;
+    height: 15px;
+}
+
+.dashboard_navbar_admin_profile_content {
+    width: 0; /* 250px */
+    height: 0;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    z-index: 100;
+    overflow: hidden;
+    transition: all .1s ease-in;
+}
+.dashboard_navbar_admin_profile_menu:hover .dashboard_navbar_admin_profile_content {
+    width: 250px;
+    height: 125px;
+    box-shadow: 0 0 10px 5px rgba(153, 153, 153, 0.249);
+}
+.dashboard_navbar_admin_profile_content p {
+    font-family: 'Montserrat';
+    padding: 10px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.dashboard_navbar_admin_profile_content p:hover {
+    background-color: #74bc41;
+}
+
+.dashboard_navbar_admin_profile_content p span {
+    margin-left: 5px;
+}
+
+.dashboard_navbar_admin_profile_content button {
+    width: 100%;
+    font-family: 'Montserrat';
+    padding: 10px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    height: 50px;
+}
+.dashboard_navbar_admin_profile_content button:hover {
+    background-color: #74bc41;
+}
+.dashboard_navbar_admin_profile_content button span {
+    margin-left: 5px;
+}
+
+/*  */
+.dashboard_navbar_admin_sidebar_and_content {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.dashboard_navbar_admin_sidebar {
+    width: 0px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    transition: all .3s ease-out;
+    padding-top: 100px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 110;
+    box-shadow: 0 13px 10px 5px rgba(153, 153, 153, 0.249);
+}
+.dashboard_navbar_admin_sidebar_width {
+    width: 250px;
+}
+
+
+
+.dashboard_navbar_admin_sidebar h1 {
+    font-family: 'Montserrat';
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    color: gray;
+}
+
+.dashboard_navbar_admin_sidebar p {
+    font-family: 'Montserrat';
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: gray;
+}
+
+.dashboard_navbar_admin_sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard_navbar_admin_sidebar ul a {
+    color: black;
+    text-decoration: none;
+}
+.dashboard_navbar_admin_sidebar ul li {
+    height: 50px;
+    background-color: white;
+    padding-left: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    font-size: 12px;
+}
+.dashboard_navbar_admin_sidebar ul li:hover {
+    box-shadow: inset 0px 2px 20px 0px #e4e4e482;
+}
+.dashboard_navbar_admin_content {
+    width: 100%;
+    height: fit-content;
+    padding-top: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}

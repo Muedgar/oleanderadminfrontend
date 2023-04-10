@@ -1,0 +1,113 @@
+.sofa_light_dashboard_furniturestore_components_carttable .thumbnail {
+    width: 100px;
+    height: 100px;
+}
+
+.sofa_light_dashboard_furniturestore_components_carttable .trash {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    padding: 1px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.money_trash_div {
+    display: flex;
+    flex-direction: row;
+}
+.sofa_light_dashboard_furniturestore_components_carttable .trash:hover {
+    background-color: rgba(182, 8, 8, 0.489);
+}
+.sofa_light_dashboard_furniturestore_components_carttable .money {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    padding-left: 20px;
+}
+  
+.sofa_light_dashboard_furniturestore_components_carttable {
+    width: 80vw;
+    padding-bottom: 50px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: 50px auto;
+    box-shadow: 0 0 10px 10px rgba(219, 219, 219, 0.321);
+
+}
+
+.sofa_light_dashboard_furniturestore_components_carttable table {
+    width: 100%;
+    position: relative;
+}
+.sofa_light_dashboard_furniturestore_components_carttable thead {
+    width: 100%;
+    background-color: aliceblue;
+    height: 50px;
+    position: sticky;
+    top: 0;
+}
+.sofa_light_dashboard_furniturestore_components_carttable thead tr {
+    padding:0;
+    margin: 0;
+}
+.sofa_light_dashboard_furniturestore_components_carttable tbody tr {
+    padding:0;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+}
+.sofa_light_dashboard_furniturestore_components_carttable tbody tr:hover {
+    box-shadow: 0 6px 6px 0px #b8b8b899;
+}
+.sofa_light_dashboard_furniturestore_components_carttable thead tr th:nth-child(1) {
+    width: 35%;
+}
+
+.sofa_light_dashboard_furniturestore_components_carttable tbody tr td:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.sofa_light_dashboard_furniturestore_components_carttable tbody tr td:nth-child(1) .thumbnailDescription {
+    margin-left: 30px;
+}
+
+.sofa_light_dashboard_furniturestore_components_carttable tbody tr td:nth-child(1) .thumbnailDescription div {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+}
+.sofa_light_dashboard_furniturestore_components_carttable tbody tr td:nth-child(1) .thumbnailDescription div span {
+    font-weight: lighter;
+}
+.sofa_light_dashboard_furniturestore_components_carttable tbody tr td:nth-child(1) .thumbnailDescription div:nth-child(2) {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ 
+.sofa_light_dashboard_furniturestore_components_carttable tbody tr .center{
+   align-self: center;
+}
+
+
+.sofa_light_dashboard_furniturestore_components_carttable .productActions {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.sofa_light_dashboard_furniturestore_components_carttable .productActions button {
+    width: 30px;
+    height: 30px;
+    border-radius: 25%;
+    border: none;
+    cursor: pointer;
+}

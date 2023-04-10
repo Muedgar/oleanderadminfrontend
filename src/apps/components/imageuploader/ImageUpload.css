@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+}
+
+.sofa_light_dashboard_furniturestore_components_imageUpload {
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin: 50px auto;
+    border: 1px dotted goldenrod;
+    cursor: pointer;
+}
+.sofa_light_dashboard_furniturestore_components_imageUpload:hover {
+    background-color: rgba(165, 165, 165, 0.074);
+}
+.sofa_light_dashboard_furniturestore_components_imageUpload img {
+    width: 50px;
+    height: 50px;
+}
+
+.sofa_light_dashboard_furniturestore_components_imageUpload p {
+    font-family: 'Montserrat','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    color: black;
+    font-size: 16px;
+}
+
+.sofa_light_dashboard_furniturestore_components_imageUpload p span {
+    color: goldenrod;
+}
