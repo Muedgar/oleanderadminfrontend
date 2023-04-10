@@ -22,7 +22,7 @@ function AddProduct() {
   let checkLogin = 'check'
   useEffect(() => {
       async function getUser() {
-          await fetch("http://localhost:3003/backend/api/getLoggedIn",{credentials: "include"})
+          await fetch("https://www.backend.oleanderschool.com/backend/api/getLoggedIn",{credentials: "include"})
           .then(d => d.json())
           .then(d => {
               console.log(d);
@@ -200,7 +200,7 @@ const emptyerrorbuttonId = (
             }
 
             try {
-              await fetch("http://localhost:3003/backend/api/savenotaloneinfo", {
+              await fetch("https://www.backend.oleanderschool.com/backend/api/savenotaloneinfo", {
                 method: "POST",
                 credentials: "include",
                 headers: {
