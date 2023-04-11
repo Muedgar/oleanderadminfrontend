@@ -8,40 +8,15 @@ import Titles from '../components/titles/Titles'
 import Labels from '../components/labels/Labels'
 
 import './AddProduct.css'
-import TextArea from '../components/textarea/TextArea'
+import '../components/textarea/TextArea.css'
 
-import ComboBox from '../components/combobox/ComboBox'
-
+import '../components/combobox/ComboBox.css'
 import "../components/imageuploader/ImageUpload.css"
 import ActionButton from '../components/actionbuttons/ActionButton'
 
 
 
 function AddProduct() {
-
-  let checkLogin = 'check'
-  useEffect(() => {
-      async function getUser() {
-          await fetch("https://www.backend.oleanderschool.com/backend/api/getLoggedIn",{credentials: "include"})
-          .then(d => d.json())
-          .then(d => {
-              console.log(d);
-              if(d.user === "Not Logged in") {
-                  console.log(d, "not logged in")
-                  window.location = "/"
-                  return
-              }
-              document.getElementById("preloaderScreenAddProduct").style.display = "none";
-            })
-          .catch(e => {
-              console.log("error")
-          })
-      }
-      if(checkLogin === 'check') {
-          getUser()
-      }
-  },[checkLogin])
-  
 
   let [summary, setSummary] = useState();
   let [yearOne, setYearOne] = useState();
@@ -57,6 +32,63 @@ function AddProduct() {
   let [yearSix, setYearSix] = useState();
   let [yearSixDescription, setYearSixDescription] = useState();
 
+  let checkLogin = 'check'
+  useEffect(() => {
+      async function getUser() {
+          await fetch("https://www.backend.oleanderschool.com/backend/api/getLoggedIn",{credentials: "include"})
+          .then(d => d.json())
+          .then(d => {
+              if(d.user === "Not Logged in") {
+                  console.log(d, "not logged in")
+                  window.location = "/"
+                  return
+              }
+              document.getElementById("preloaderScreenAddProduct").style.display = "none";
+            })
+          .catch(e => {
+              console.log("error")
+          })
+      }
+      if(checkLogin === 'check') {
+          getUser()
+      }
+  },[checkLogin])
+
+let getSummary = "yes"
+  useEffect(() => {
+      async function getData() {
+          await fetch("https://www.backend.oleanderschool.com/backend/api/notaloneinfo")
+          .then(d => d.json())
+          .then(d => {
+              
+              setSummary(d[0]['notAlone']['summary'])
+              
+              setYearOneDescription(d[0]['notAlone']['yearOneDescription'])
+              setYearTwoDescription(d[0]['notAlone']['yearTwoDescription'])
+              setYearThreeDescription(d[0]['notAlone']['yearThreeDescription'])
+              setYearFourDescription(d[0]['notAlone']['yearFourDescription'])
+              setYearFiveDescription(d[0]['notAlone']['yearFiveDescription'])
+              setYearSixDescription(d[0]['notAlone']['yearSixDescription'])
+
+              setYearOne(d[0]['notAlone']['yearOne'])
+              setYearTwo(d[0]['notAlone']['yearTwo'])
+              setYearThree(d[0]['notAlone']['yearThree'])
+              setYearFour(d[0]['notAlone']['yearFour'])
+              setYearFive(d[0]['notAlone']['yearFive'])
+              setYearSix(d[0]['notAlone']['yearSix'])
+            })
+          .catch(e => {
+              console.log("error")
+          })
+      }
+      if(getSummary==="yes") {
+        getData()
+      }
+  },[getSummary])
+
+ 
+
+  
   
 
     const [toast, addToast] = useState(0)
@@ -146,35 +178,149 @@ const emptyerrorbuttonId = (
   </>
         <Titles title='Nturi Wenyine Program Information' />
         <Labels title='Summary:' />
-        <TextArea keepSync={val => setSummary(val)} id="sofa_light_dashboard_furniturestore_components_textfield_product_name" />
+        <div className='sofa_light_dashboard_furniturestore_components_textarea'>
+        <textarea type="text" value={summary} onChange={e => {
+          setSummary(e.target.value)
+        }}/>
+      </div>
         <Labels title='History:' />
         <Labels title='Description:' />
-        <ComboBox  keepSync={val => setYearOne(val)} id="sofa_light_dashboard_furniturestore_components_textfield_sub_text" />
-        <TextArea keepSync={val => setYearOneDescription(val)} id="sofa_light_dashboard_furniturestore_components_textfield_product_name" />
         
+        <div className='sofa_light_dashboard_furniturestore_components_textfield'>
+          <select value={yearOne} onChange={e => {
+          setYearOne(e.target.value)
+          }}>
+            <option value=''></option>
+            <option value='2015'>2015</option>
+            <option value='2016'>2016</option>
+            <option value='2017'>2017</option>
+            <option value='2018'>2018</option>
+            <option value='2019'>2019</option>
+            <option value='2020'>2020</option>
+            <option value='2021'>2021</option>
+            <option value='2022'>2022</option>
+            <option value='2023'>2023</option>
+          </select>
+    </div>
+        <div className='sofa_light_dashboard_furniturestore_components_textarea'>
+        <textarea type="text" value={yearOneDescription} onChange={e => {
+          setYearOneDescription(e.target.value)
+        }}/>
+      </div>
         <Labels title='Description:' />
-        <ComboBox  keepSync={val => setYearTwo(val)} id="sofa_light_dashboard_furniturestore_components_textfield_sub_text" />
-        <TextArea keepSync={val => setYearTwoDescription(val)} id="sofa_light_dashboard_furniturestore_components_textfield_product_name" />
-        
+        <div className='sofa_light_dashboard_furniturestore_components_textfield'>
+          <select value={yearTwo} onChange={e => {
+          setYearTwo(e.target.value)
+          }}>
+            <option value=''></option>
+            <option value='2015'>2015</option>
+            <option value='2016'>2016</option>
+            <option value='2017'>2017</option>
+            <option value='2018'>2018</option>
+            <option value='2019'>2019</option>
+            <option value='2020'>2020</option>
+            <option value='2021'>2021</option>
+            <option value='2022'>2022</option>
+            <option value='2023'>2023</option>
+          </select>
+    </div>
+        <div className='sofa_light_dashboard_furniturestore_components_textarea'>
+        <textarea type="text" value={yearTwoDescription} onChange={e => {
+          setYearTwoDescription(e.target.value)
+        }}/>
+      </div>
 
         <Labels title='Description:' />
-        <ComboBox  keepSync={val => setYearThree(val)} id="sofa_light_dashboard_furniturestore_components_textfield_sub_text" />
-        <TextArea keepSync={val => setYearThreeDescription(val)} id="sofa_light_dashboard_furniturestore_components_textfield_product_name" />
+        <div className='sofa_light_dashboard_furniturestore_components_textfield'>
+          <select value={yearThree} onChange={e => {
+          setYearThree(e.target.value)
+          }}>
+            <option value=''></option>
+            <option value='2015'>2015</option>
+            <option value='2016'>2016</option>
+            <option value='2017'>2017</option>
+            <option value='2018'>2018</option>
+            <option value='2019'>2019</option>
+            <option value='2020'>2020</option>
+            <option value='2021'>2021</option>
+            <option value='2022'>2022</option>
+            <option value='2023'>2023</option>
+          </select>
+    </div>
         
+        <div className='sofa_light_dashboard_furniturestore_components_textarea'>
+        <textarea type="text" value={yearThreeDescription} onChange={e => {
+          setYearThreeDescription(e.target.value)
+        }}/>
+      </div>
 
         <Labels title='Description:' />
-        <ComboBox  keepSync={val => setYearFour(val)} id="sofa_light_dashboard_furniturestore_components_textfield_sub_text" />
-        <TextArea keepSync={val => setYearFourDescription(val)} id="sofa_light_dashboard_furniturestore_components_textfield_product_name" />
-        
+        <div className='sofa_light_dashboard_furniturestore_components_textfield'>
+          <select value={yearFour} onChange={e => {
+          setYearFour(e.target.value)
+          }}>
+            <option value=''></option>
+            <option value='2015'>2015</option>
+            <option value='2016'>2016</option>
+            <option value='2017'>2017</option>
+            <option value='2018'>2018</option>
+            <option value='2019'>2019</option>
+            <option value='2020'>2020</option>
+            <option value='2021'>2021</option>
+            <option value='2022'>2022</option>
+            <option value='2023'>2023</option>
+          </select>
+    </div>
+        <div className='sofa_light_dashboard_furniturestore_components_textarea'>
+        <textarea type="text" value={yearFourDescription} onChange={e => {
+          setYearFourDescription(e.target.value)
+        }}/>
+      </div>
         <Labels title='Description:' />
-        <ComboBox  keepSync={val => setYearFive(val)} id="sofa_light_dashboard_furniturestore_components_textfield_sub_text" />
-        <TextArea keepSync={val => setYearFiveDescription(val)} id="sofa_light_dashboard_furniturestore_components_textfield_product_name" />
-        
+        <div className='sofa_light_dashboard_furniturestore_components_textfield'>
+          <select value={yearFive} onChange={e => {
+          setYearFive(e.target.value)
+          }}>
+            <option value=''></option>
+            <option value='2015'>2015</option>
+            <option value='2016'>2016</option>
+            <option value='2017'>2017</option>
+            <option value='2018'>2018</option>
+            <option value='2019'>2019</option>
+            <option value='2020'>2020</option>
+            <option value='2021'>2021</option>
+            <option value='2022'>2022</option>
+            <option value='2023'>2023</option>
+          </select>
+    </div>
+        <div className='sofa_light_dashboard_furniturestore_components_textarea'>
+        <textarea type="text" value={yearFiveDescription} onChange={e => {
+          setYearFiveDescription(e.target.value)
+        }}/>
+      </div>
 
         <Labels title='Description:' />
-        <ComboBox  keepSync={val => setYearSix(val)} id="sofa_light_dashboard_furniturestore_components_textfield_sub_text" />
-        <TextArea keepSync={val => setYearSixDescription(val)} id="sofa_light_dashboard_furniturestore_components_textfield_product_name" />
-        
+        <div className='sofa_light_dashboard_furniturestore_components_textfield'>
+          <select value={yearSix} onChange={e => {
+          setYearSix(e.target.value)
+          }}>
+            <option value=''></option>
+            <option value='2015'>2015</option>
+            <option value='2016'>2016</option>
+            <option value='2017'>2017</option>
+            <option value='2018'>2018</option>
+            <option value='2019'>2019</option>
+            <option value='2020'>2020</option>
+            <option value='2021'>2021</option>
+            <option value='2022'>2022</option>
+            <option value='2023'>2023</option>
+          </select>
+    </div>
+        <div className='sofa_light_dashboard_furniturestore_components_textarea'>
+        <textarea type="text" value={yearSixDescription} onChange={e => {
+          setYearSixDescription(e.target.value)
+        }}/>
+      </div>
         {/* save product */}
         <ActionButton handleSave={async e => {
            let d = {summary,
