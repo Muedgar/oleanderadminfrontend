@@ -14,9 +14,15 @@ import Settings from './Settings';
 import { NOTALONE } from '../apps';
 import SPONSORS from '../apps/sponsors/sponsors';
 import Signin from './Signin';
+import LIFEATSCHOOL from '../apps/lifeatschool/lifeatschool';
+import STAFF from '../apps/staff/staff';
+import ADMISSIONS from '../apps/admissions/admissions';
+
 
 function Dashboard() {
   const [open, setOpen] = useState(true)
+
+
   return (
     <>
     <BrowserRouter>
@@ -44,7 +50,7 @@ function Dashboard() {
                     <p><img className='dashboard_navbar_admin_profile_img' src={gear} alt="gear" /><span style={{color: 'black'}}>Settings</span></p>
                     </NavLink>
                     <button onClick={async e => {
-                        await fetch("https://www.backend.oleanderschool.com/backend/api/logout",{credentials: 'include'})
+                        await fetch("http://localhost:3003/backend/api/logout",{credentials: 'include'})
                         .then(d => d.json())
                         .then(d => {
                             window.location = "/"
@@ -65,12 +71,26 @@ function Dashboard() {
                     <li>Nturi Wenyine</li>
                   </NavLink>
 
+                  <NavLink
+                  to='/onpsadmin/events'>
+                    <li>Life At School</li>
+                  </NavLink>
+
+                  <NavLink
+                  to='/onpsadmin/staff'>
+                    <li>Staff Profiles</li>
+                  </NavLink>
+
                 </ul>
                 <p>DONATIONS</p>
                 <ul>
                 <NavLink
                   to='/onpsadmin/sponsors'>
                     <li>Sponsors</li>
+                  </NavLink>
+                  <NavLink
+                  to='/onpsadmin/admissions'>
+                    <li>Admissions</li>
                   </NavLink>
 
                 </ul>
@@ -95,7 +115,22 @@ function Dashboard() {
                             <SPONSORS />
                         </ErrorBoundary>
                     } />
-
+                    {/* LIFEATSCHOOL */}
+                    <Route path='/onpsadmin/events' element={
+                        <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
+                            <LIFEATSCHOOL />
+                        </ErrorBoundary>
+                    } />
+                    <Route path='/onpsadmin/staff' element={
+                        <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
+                            <STAFF />
+                        </ErrorBoundary>
+                    } />
+                    <Route path='/onpsadmin/admissions' element={
+                        <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
+                            <ADMISSIONS />
+                        </ErrorBoundary>
+                    } />
                 <Route path='/onpsadmin/settings' element={
                         <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
                             <Settings />

@@ -1,9 +1,9 @@
 async function saveProduct(data, textInfo) {
     let saveStatus = "not saved";
+    saveStatus = "saved"
     let d = {productInfo: textInfo, images: data}
     /// make a post request.
-    console.log("sending data ", d)
-   await fetch("http://localhost:3003/sofalight/backend/api/products/add", {
+   await fetch("http://localhost:3003/backend/api/event/add", {
   method: "POST",
   credentials: 'include',
   headers: {

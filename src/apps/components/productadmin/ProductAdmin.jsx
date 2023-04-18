@@ -23,7 +23,7 @@ function ProductAdmin(props)  {
             document.getElementById("productActions_Admin_Edit_A").click();
           }}>Edit Item.</button>
           <button onClick={async e => {
-await fetch("https://www.backend.sofalightbusiness.com/sofalight/backend/api/products/delete/"+props.id, {
+await fetch("http://localhost:3003/sofalight/backend/api/products/delete/"+props.id, {
   method: "DELETE",
   credentials: 'include'
 })
