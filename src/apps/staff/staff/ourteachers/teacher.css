@@ -1,0 +1,81 @@
+@font-face {
+    font-family: OpenSans;
+    src: url('./fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url('./fonts/Open_Sans/static/OpenSans/OpenSans-Medium.ttf');
+    font-weight: 500;
+}
+
+
+
+
+@font-face {
+    font-family: OpenSans;
+    src: url('./fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf');
+    font-weight: 400;
+}
+
+.teacher {
+    width: 350px;
+    height: 400px;
+    border-radius: 20px;
+    position: relative;
+    perspective: 1000px;
+    padding-top: 20px;
+    margin: 40px;
+}
+
+.teacher-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.teacher-front-face, .teacher-back-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+
+.teacher-back-face {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 3px 0 #333;
+    cursor: pointer;
+}
+
+.teacher-front-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.teacher-back-face p{
+    width: fit-content;
+    height: fit-content;
+    background-color: black;
+    margin: 20px auto;
+    color: white;
+    padding: 5px;
+    font-family: 'OpenSans';
+    cursor:copy;
+}
+
+.teacher-back-face p span{
+    font-weight: bolder;
+}

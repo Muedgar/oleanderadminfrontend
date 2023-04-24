@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 
 import './staff.css'
+import AddProduct from './createstaff/AddProduct';
+import StaffProfiles from './staff/staffProfiles';
 
 function STAFF() {
   return (
@@ -25,10 +27,10 @@ function STAFF() {
       <Col sm={9}>
         <Tab.Content>
           <Tab.Pane eventKey="first">
-            <div>Staff profile</div>
+            <StaffProfiles />
           </Tab.Pane>
           <Tab.Pane eventKey="second">
-            <div>Create staff profiles</div>
+            <AddProduct />
           </Tab.Pane>
         </Tab.Content>
       </Col>

@@ -9,8 +9,6 @@ import Labels from '../../components/labels/Labels'
 
 import './AddProduct.css'
 import TextField from '../../components/textfields/TextField'
-import TextArea from '../../components/textarea/TextArea'
-import RadioButton from '../../components/radiobuttons/RadioButton'
 import ImageViewer from '../../components/imageviewer/ImageViewer'
 
 import "../../components/imageuploader/ImageUpload.css"
@@ -27,12 +25,9 @@ function AddProduct() {
 
   let [productName, setProductName] = useState();
   let [productSubText, setProductSubText] = useState();
-  let [productDescription, setProductDescription] = useState();
-  let [productMetaTitle, setProductMetaTitle] = useState();
-  let [productStatus, setProductStatus] = useState();
 
   function handleClickUploadImage() {
-    if(products.length >= 4) return;
+    if(products.length >= 1) return;
     
     widgetRef.current.open()
 }
@@ -83,7 +78,7 @@ const failureToast = (
   </CToast>
 )
 
-const emptyerrorbuttonId = (
+const emptyerrorbuttonIdStaff = (
   <CToast>
     <CToastHeader closeButton>
       <svg
@@ -124,28 +119,21 @@ const cloudinaryRef = useRef();
     
     <div className='sofa_light_dashboard_furniturestore_AddProduct'>
       <>
-    <CButton style={{display: 'none'}} id="successbuttonId" onClick={() => addToast(successToast)}>Send a toast</CButton>
+    <CButton style={{display: 'none'}} id="successbuttonIdStaff" onClick={() => addToast(successToast)}>Send a toast</CButton>
     <CToaster ref={success} push={toast} placement="top-end" />
 
-    <CButton style={{display: 'none'}} id="failurebuttonId" onClick={() => addToast(failureToast)}>Send a toast</CButton>
+    <CButton style={{display: 'none'}} id="failurebuttonIdStaff" onClick={() => addToast(failureToast)}>Send a toast</CButton>
     <CToaster ref={failure} push={toast} placement="top-end" />
 
-    <CButton style={{display: 'none'}} id="emptyerrorbuttonId" onClick={() => addToast(emptyerrorbuttonId)}>Send a toast</CButton>
+    <CButton style={{display: 'none'}} id="emptyerrorbuttonIdStaff" onClick={() => addToast(emptyerrorbuttonIdStaff)}>Send a toast</CButton>
     <CToaster ref={emptyError} push={toast} placement="top-end" />
   </>
-        <Titles title='Life At School (News - Information)' />
-        <Labels title='News Title:' />
+        <Titles title='Staff (Profile - Information)' />
+        <Labels title='Staff Name:' />
         <TextField keepSync={val => setProductName(val)} id="sofa_light_dashboard_furniturestore_components_textfield_product_name" />
-        <Labels title='News Summary:' />
+        <Labels title='Staff Responsibility:' />
         <TextField  keepSync={val => setProductSubText(val)} id="sofa_light_dashboard_furniturestore_components_textfield_sub_text" />
-        <Labels title='Authored By:' />
-        <TextField  keepSync={val => setProductMetaTitle(val)} id="sofa_light_dashboard_furniturestore_components_textfield_meta_title" />
-        <Labels title='Status:' />
-        <RadioButton keepSync={val => setProductStatus(val)} val1="Published" val2="Draft" />
-        
-        <Labels title='News Content:' />
-        <TextArea keepSync={val => setProductDescription(val)} id="sofa_light_dashboard_furniturestore_components_textarea_1" />
-        <Titles title={`News Images (${4-products.length})`} />
+        <Titles title={`News Images (${1-products.length})`} />
         <div onClick={handleClickUploadImage} id='sofa_light_dashboard_furniturestore_components_imageUpload_Id' className='sofa_light_dashboard_furniturestore_components_imageUpload'>
           <img src={upload} alt='upload' />
           <p><span>Click and Browse</span> to Choose a File</p>
@@ -170,16 +158,13 @@ const cloudinaryRef = useRef();
   let [productDescription, setProductDescription] = useState();
   let [productMetaTitle, setProductMetaTitle] = useState();
           */
-          if(productName===''||productSubText===''||productDescription===''||productMetaTitle===''||productStatus===''||products.length===0) {
-            document.getElementById("emptyerrorbuttonId").click();
+          if(productName===''||productSubText===''||products.length===0) {
+            document.getElementById("emptyerrorbuttonIdStaff").click();
             return;
           }
           let textInfo = {
             productName,
-            productSubText,
-            productStatus,
-            productDescription,
-            productMetaTitle,
+            productSubText
           }
           document.getElementById("saveProductStatusButtonId").style.display = "block"
           document.getElementById("saveProductButtonId").setAttribute("disabled","true")
@@ -190,11 +175,11 @@ const cloudinaryRef = useRef();
             // get ready to process next save
             setProducts([])
             document.getElementById("saveProductStatusButtonId").style.display = "none"
-            document.getElementById("successbuttonId").click();
+            document.getElementById("successbuttonIdStaff").click();
             document.getElementById("saveProductButtonId").removeAttribute("disabled")
            
           }else {
-            document.getElementById("failurebuttonId").click();
+            document.getElementById("failurebuttonIdStaff").click();
           }
         }} />
        

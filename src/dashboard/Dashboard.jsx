@@ -17,6 +17,7 @@ import Signin from './Signin';
 import LIFEATSCHOOL from '../apps/lifeatschool/lifeatschool';
 import STAFF from '../apps/staff/staff';
 import ADMISSIONS from '../apps/admissions/admissions';
+import ErrorPage from './ErrorPage';
 
 
 function Dashboard() {
@@ -26,13 +27,7 @@ function Dashboard() {
   return (
     <>
     <BrowserRouter>
-    <Routes>
-                    <Route path='/' element={
-                        <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
-                            <Signin />
-                        </ErrorBoundary>
-                    } />
-                    </Routes>
+  
     <div className='dashboard'>
         <nav className='dashboard_navbar'>
             <div className='dashboard_navbar_logo_menu_position'>
@@ -103,40 +98,50 @@ function Dashboard() {
                 </ul>
             </aside>
             <div className='dashboard_navbar_admin_content'>
-                <Routes>
-                    <Route path='/onpsadmin' element={
+                
+            <Routes>
+    <Route path="*" element={<ErrorPage />} />
+                    <Route path='/' element={
                         <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
-                            <NOTALONE />
+                            <Signin />
                         </ErrorBoundary>
                     } />
-                    
-                    <Route path='/onpsadmin/sponsors' element={
-                        <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
-                            <SPONSORS />
-                        </ErrorBoundary>
-                    } />
-                    {/* LIFEATSCHOOL */}
-                    <Route path='/onpsadmin/events' element={
-                        <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
-                            <LIFEATSCHOOL />
-                        </ErrorBoundary>
-                    } />
-                    <Route path='/onpsadmin/staff' element={
-                        <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
-                            <STAFF />
-                        </ErrorBoundary>
-                    } />
-                    <Route path='/onpsadmin/admissions' element={
-                        <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
-                            <ADMISSIONS />
-                        </ErrorBoundary>
-                    } />
-                <Route path='/onpsadmin/settings' element={
-                        <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
-                            <Settings />
-                        </ErrorBoundary>
-                    } />
-                </Routes>
+                
+                <Route path='/onpsadmin' element={
+                    <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
+                        <NOTALONE />
+                    </ErrorBoundary>
+                } />
+                
+                <Route path='/onpsadmin/sponsors' element={
+                    <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
+                        <SPONSORS />
+                    </ErrorBoundary>
+                } />
+                {/* LIFEATSCHOOL */}
+                <Route path='/onpsadmin/events' element={
+                    <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
+                        <LIFEATSCHOOL />
+                    </ErrorBoundary>
+                } />
+                <Route path='/onpsadmin/staff' element={
+                    <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
+                        <STAFF />
+                    </ErrorBoundary>
+                } />
+                <Route path='/onpsadmin/admissions' element={
+                    <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
+                        <ADMISSIONS />
+                    </ErrorBoundary>
+                } />
+            <Route path='/onpsadmin/settings' element={
+                    <ErrorBoundary fallback={<ErrorMessage message="Can not connect to service. Please contact support. Thank you!" />}>
+                        <Settings />
+                    </ErrorBoundary>
+                } />
+                
+                    </Routes>
+                
             </div>
         </div>
     </div>
