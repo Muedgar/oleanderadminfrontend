@@ -35,7 +35,7 @@ function AddProduct() {
   let checkLogin = 'check'
   useEffect(() => {
       async function getUser() {
-          await fetch("http://localhost:3003/backend/api/getLoggedIn",{credentials: "include"})
+          await fetch("https://www.backend.oleanderschool.com/backend/api/getLoggedIn",{credentials: "include"})
           .then(d => d.json())
           .then(d => {
               if(d.user === "Not Logged in") {
@@ -57,7 +57,7 @@ function AddProduct() {
 let getSummary = "yes"
   useEffect(() => {
       async function getData() {
-          await fetch("http://localhost:3003/backend/api/notaloneinfo")
+          await fetch("https://www.backend.oleanderschool.com/backend/api/notaloneinfo")
           .then(d => d.json())
           .then(d => {
               
@@ -280,7 +280,7 @@ const emptyerrorbuttonId = (
             }
 
             try {
-              await fetch("http://localhost:3003/backend/api/savenotaloneinfo", {
+              await fetch("https://www.backend.oleanderschool.com/backend/api/savenotaloneinfo", {
                 method: "POST",
                 credentials: "include",
                 headers: {

@@ -8,7 +8,7 @@ function EVENTATSCHOOL() {
 
   useEffect(() => {
     async function getData() {
-      await fetch("http://localhost:3003/backend/api/event")
+      await fetch("https://www.backend.oleanderschool.com/backend/api/event")
       .then(d => d.json())
       .then(d => {
         console.log(d)
@@ -34,7 +34,7 @@ function EVENTATSCHOOL() {
             <button delete-id={d._id} onClick={async e => {
           if(e.target.getAttribute('delete-id')) {
             let id = e.target.getAttribute('delete-id');
-            await fetch("http://localhost:3003/backend/api/event/delete", {
+            await fetch("https://www.backend.oleanderschool.com/backend/api/event/delete", {
   method: "DELETE",
   credentials: 'include',
   headers: {

@@ -20,7 +20,7 @@ function LIFEATSCHOOL() {
   ///
 let getNews = "get"
   const handleNews = async () => {
-    await fetch("http://localhost:3003/backend/api/news")
+    await fetch("https://www.backend.oleanderschool.com/backend/api/news")
     .then(d => d.json())
     .then(d => setNews(d))
     .catch(e => console.log(e.message))
@@ -35,7 +35,7 @@ let getNews = "get"
   let checkLogin = 'check'
   useEffect(() => {
       async function getUser() {
-          await fetch("http://localhost:3003/backend/api/getLoggedIn",{credentials: "include"})
+          await fetch("https://www.backend.oleanderschool.com/backend/api/getLoggedIn",{credentials: "include"})
           .then(d => d.json())
           .then(d => {
               if(d.user === "Not Logged in") {

@@ -3,7 +3,7 @@ async function saveProduct(data, textInfo) {
     saveStatus = "saved"
     let d = {productInfo: textInfo, images: data}
     /// make a post request.
-   await fetch("http://localhost:3003/backend/api/event/add", {
+   await fetch("https://www.backend.oleanderschool.com/backend/api/event/add", {
   method: "POST",
   credentials: 'include',
   headers: {

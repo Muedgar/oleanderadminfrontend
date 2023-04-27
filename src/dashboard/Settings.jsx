@@ -8,7 +8,7 @@ function Settings() {
   let checkLogin = 'check'
   useEffect(() => {
       async function getUser() {
-          await fetch("http://localhost:3003/backend/api/getLoggedIn",{credentials: "include"})
+          await fetch("https://www.backend.oleanderschool.com/backend/api/getLoggedIn",{credentials: "include"})
           .then(d => d.json())
           .then(d => {
               console.log(d);
@@ -53,7 +53,7 @@ function Settings() {
                     }, 3000);
                     return;
                 } 
-                await fetch("http://localhost:3003/backend/api/changePassword",{
+                await fetch("https://www.backend.oleanderschool.com/backend/api/changePassword",{
                     method: 'POST',
                     credentials: 'include',
                     headers: {

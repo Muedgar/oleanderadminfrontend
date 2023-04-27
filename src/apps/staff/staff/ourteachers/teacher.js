@@ -22,7 +22,7 @@ function Teacher(props) {
             <button delete-id={props.id} style={{position: 'absolute', top: '0'}}  onClick={async e => {
         if(e.target.getAttribute('delete-id')) {
           let id = e.target.getAttribute('delete-id');
-          await fetch("http://localhost:3003/backend/api/staff/delete", {
+          await fetch("https://www.backend.oleanderschool.com/backend/api/staff/delete", {
 method: "DELETE",
 credentials: 'include',
 headers: {

@@ -13,7 +13,7 @@ function LIFE(props) {
       <button delete-id={props.id} style={{position: 'absolute', top: '0', right: '0'}} onClick={async e => {
         if(e.target.getAttribute('delete-id')) {
           let id = e.target.getAttribute('delete-id');
-          await fetch("http://localhost:3003/backend/api/news/delete", {
+          await fetch("https://www.backend.oleanderschool.com/backend/api/news/delete", {
 method: "DELETE",
 credentials: 'include',
 headers: {

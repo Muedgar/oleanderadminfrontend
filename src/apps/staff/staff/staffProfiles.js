@@ -10,7 +10,7 @@ function StaffProfiles() {
   let getData = "yes"
   useEffect(() => {
     async function getStaff() {
-      await fetch("http://localhost:3003/backend/api/staff")
+      await fetch("https://www.backend.oleanderschool.com/backend/api/staff")
       .then(d => d.json())
       .then(d => setData(d))
       .catch(e => console.log(e.message))
