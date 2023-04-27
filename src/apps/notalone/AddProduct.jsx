@@ -272,12 +272,12 @@ const emptyerrorbuttonId = (
             yearSixDescription}
             console.log(d)
 
-            for(let i in d) {
-              if(!d[`${i}`]) {
-                document.getElementById("emptyerrorbuttonId").click();
-                return;
-              }
-            }
+            // for(let i in d) {
+            //   if(!d[`${i}`]) {
+            //     document.getElementById("emptyerrorbuttonId").click();
+            //     return;
+            //   }
+            // }
 
             try {
               await fetch("https://www.backend.oleanderschool.com/backend/api/savenotaloneinfo", {
