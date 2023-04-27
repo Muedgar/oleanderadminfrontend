@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react'
 
+import './admissions.css'
+
 function ADMISSIONS() {
   let checkLogin = 'check'
   useEffect(() => {
