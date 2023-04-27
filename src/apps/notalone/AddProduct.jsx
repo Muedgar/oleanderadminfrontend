@@ -183,24 +183,13 @@ const emptyerrorbuttonId = (
           setSummary(e.target.value)
         }}/>
       </div>
-        <Labels title='History:' />
+        {/* <Labels title='History:' /> */}
         <Labels title='Description:' />
         
         <div className='sofa_light_dashboard_furniturestore_components_textfield'>
-          <select value={yearOne} onChange={e => {
+          <input type="text" value={yearOne} onChange={e => {
           setYearOne(e.target.value)
-          }}>
-            <option value=''></option>
-            <option value='2015'>2015</option>
-            <option value='2016'>2016</option>
-            <option value='2017'>2017</option>
-            <option value='2018'>2018</option>
-            <option value='2019'>2019</option>
-            <option value='2020'>2020</option>
-            <option value='2021'>2021</option>
-            <option value='2022'>2022</option>
-            <option value='2023'>2023</option>
-          </select>
+          }}/>
     </div>
         <div className='sofa_light_dashboard_furniturestore_components_textarea'>
         <textarea type="text" value={yearOneDescription} onChange={e => {
@@ -209,20 +198,9 @@ const emptyerrorbuttonId = (
       </div>
         <Labels title='Description:' />
         <div className='sofa_light_dashboard_furniturestore_components_textfield'>
-          <select value={yearTwo} onChange={e => {
+          <input type="text" value={yearTwo} onChange={e => {
           setYearTwo(e.target.value)
-          }}>
-            <option value=''></option>
-            <option value='2015'>2015</option>
-            <option value='2016'>2016</option>
-            <option value='2017'>2017</option>
-            <option value='2018'>2018</option>
-            <option value='2019'>2019</option>
-            <option value='2020'>2020</option>
-            <option value='2021'>2021</option>
-            <option value='2022'>2022</option>
-            <option value='2023'>2023</option>
-          </select>
+          }}/>
     </div>
         <div className='sofa_light_dashboard_furniturestore_components_textarea'>
         <textarea type="text" value={yearTwoDescription} onChange={e => {
@@ -232,20 +210,9 @@ const emptyerrorbuttonId = (
 
         <Labels title='Description:' />
         <div className='sofa_light_dashboard_furniturestore_components_textfield'>
-          <select value={yearThree} onChange={e => {
+          <input type="text" value={yearThree} onChange={e => {
           setYearThree(e.target.value)
-          }}>
-            <option value=''></option>
-            <option value='2015'>2015</option>
-            <option value='2016'>2016</option>
-            <option value='2017'>2017</option>
-            <option value='2018'>2018</option>
-            <option value='2019'>2019</option>
-            <option value='2020'>2020</option>
-            <option value='2021'>2021</option>
-            <option value='2022'>2022</option>
-            <option value='2023'>2023</option>
-          </select>
+          }}/>
     </div>
         
         <div className='sofa_light_dashboard_furniturestore_components_textarea'>
@@ -256,20 +223,9 @@ const emptyerrorbuttonId = (
 
         <Labels title='Description:' />
         <div className='sofa_light_dashboard_furniturestore_components_textfield'>
-          <select value={yearFour} onChange={e => {
+          <input type="text" value={yearFour} onChange={e => {
           setYearFour(e.target.value)
-          }}>
-            <option value=''></option>
-            <option value='2015'>2015</option>
-            <option value='2016'>2016</option>
-            <option value='2017'>2017</option>
-            <option value='2018'>2018</option>
-            <option value='2019'>2019</option>
-            <option value='2020'>2020</option>
-            <option value='2021'>2021</option>
-            <option value='2022'>2022</option>
-            <option value='2023'>2023</option>
-          </select>
+          }}/>
     </div>
         <div className='sofa_light_dashboard_furniturestore_components_textarea'>
         <textarea type="text" value={yearFourDescription} onChange={e => {
@@ -278,20 +234,9 @@ const emptyerrorbuttonId = (
       </div>
         <Labels title='Description:' />
         <div className='sofa_light_dashboard_furniturestore_components_textfield'>
-          <select value={yearFive} onChange={e => {
+          <input type="text" value={yearFive} onChange={e => {
           setYearFive(e.target.value)
-          }}>
-            <option value=''></option>
-            <option value='2015'>2015</option>
-            <option value='2016'>2016</option>
-            <option value='2017'>2017</option>
-            <option value='2018'>2018</option>
-            <option value='2019'>2019</option>
-            <option value='2020'>2020</option>
-            <option value='2021'>2021</option>
-            <option value='2022'>2022</option>
-            <option value='2023'>2023</option>
-          </select>
+          }}/>
     </div>
         <div className='sofa_light_dashboard_furniturestore_components_textarea'>
         <textarea type="text" value={yearFiveDescription} onChange={e => {
@@ -301,20 +246,9 @@ const emptyerrorbuttonId = (
 
         <Labels title='Description:' />
         <div className='sofa_light_dashboard_furniturestore_components_textfield'>
-          <select value={yearSix} onChange={e => {
+          <input type="text" value={yearSix} onChange={e => {
           setYearSix(e.target.value)
-          }}>
-            <option value=''></option>
-            <option value='2015'>2015</option>
-            <option value='2016'>2016</option>
-            <option value='2017'>2017</option>
-            <option value='2018'>2018</option>
-            <option value='2019'>2019</option>
-            <option value='2020'>2020</option>
-            <option value='2021'>2021</option>
-            <option value='2022'>2022</option>
-            <option value='2023'>2023</option>
-          </select>
+          }}/>
     </div>
         <div className='sofa_light_dashboard_furniturestore_components_textarea'>
         <textarea type="text" value={yearSixDescription} onChange={e => {

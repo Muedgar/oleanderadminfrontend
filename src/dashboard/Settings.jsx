@@ -39,14 +39,20 @@ function Settings() {
         <div className='signin_title'>
             <p>Change Password ONPS Admin</p>
         </div>
-        <label>Old Password</label>
+        <label>Enter Password</label>
         <input type="password" value={oldPassword} onChange={e => setOldPassword(e.target.value)} />
-        <label>New Password</label>
+        <label>Confirm Password</label>
         <input type="password" value={newPassword} onChange={e => setNewPassword(e.target.value)} />
         <div className='signinbutton'>
             <button onClick={async e => {
                 e.target.innerHTML = 'Changing Password ...'
-                
+                if(oldPassword.trim() !== newPassword.trim()) {
+                    e.target.innerHTML = "Passwords Don't Match"
+                    setTimeout(() => {
+                        e.target.innerHTML = "Change Password"
+                    }, 3000);
+                    return;
+                } 
                 await fetch("https://www.backend.oleanderschool.com/backend/api/changePassword",{
                     method: 'POST',
                     credentials: 'include',

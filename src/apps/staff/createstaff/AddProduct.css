@@ -1,0 +1,17 @@
+
+.sofa_light_dashboard_furniturestore_AddProduct {
+    width: 90%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 15px;
+    transition: all .3s ease-out;
+    padding-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.sofa_light_dashboard_furniturestore_AddProduct:hover {
+    box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.52);
+}

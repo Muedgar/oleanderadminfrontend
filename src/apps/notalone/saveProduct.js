@@ -3,7 +3,7 @@ async function saveProduct(data, textInfo) {
     let d = {productInfo: textInfo, images: data}
     /// make a post request.
     console.log("sending data ", d)
-   await fetch("https://www.backend.sofalightbusiness.com/sofalight/backend/api/products/add", {
+   await fetch("https://www.backend.oleanderschool.com/sofalight/backend/api/products/add", {
   method: "POST",
   credentials: 'include',
   headers: {

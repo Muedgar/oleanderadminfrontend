@@ -65,6 +65,7 @@
     position: fixed;
     top:0;
     z-index: 9999;
+    overflow-y: scroll;
     background: linear-gradient(to right, rgb(0, 0, 0) 50%, #74bc41 50%)
 }
 
@@ -76,6 +77,8 @@
     justify-content: center;
     align-items: center;
     padding-top: 80px;
+    overflow-y: scroll;
+    padding-bottom: 50px;
 }
 
 .signin h1 {
