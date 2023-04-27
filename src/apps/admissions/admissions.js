@@ -13,7 +13,7 @@ function ADMISSIONS() {
                   window.location = "/"
                   return
               }
-              document.getElementById("preloaderScreenSponsors").style.display = "none";
+              document.getElementById("preloaderScreenAdmissions").style.display = "none";
             })
           .catch(e => {
               console.log("error")

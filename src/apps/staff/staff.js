@@ -21,7 +21,7 @@ function STAFF() {
                   window.location = "/"
                   return
               }
-              document.getElementById("preloaderScreenSponsors").style.display = "none";
+              document.getElementById("preloaderScreenStaff").style.display = "none";
             })
           .catch(e => {
               console.log("error")
