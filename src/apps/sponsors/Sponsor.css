@@ -1,0 +1,34 @@
+
+
+.orders_information {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.orders_information .orders_customer_information {
+    width: 100%;
+    height: fit-content;
+}
+
+.orders_information .orders_order_information {
+    width: 100%;
+    height: 200px;
+    background-color: antiquewhite;
+}
+
+.activeToDelete {
+    background-color: antiquewhite;
+}
+
+.deleteOrdersButton {
+    background-color: transparent;
+    border: 3px solid black;
+    padding: 5px
+}
+
+.deleteOrdersButton:hover {
+    background-color: black;
+    color: white;
+}

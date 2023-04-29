@@ -41,16 +41,13 @@
     position: relative;
 }
 .sofa_light_dashboard_furniturestore_components_carttable thead {
-    width: 100%;
+    width: fit-content;
     background-color: aliceblue;
     height: 50px;
     position: sticky;
     top: 0;
 }
-.sofa_light_dashboard_furniturestore_components_carttable thead tr {
-    padding:0;
-    margin: 0;
-}
+
 .sofa_light_dashboard_furniturestore_components_carttable tbody tr {
     padding:0;
     margin: 0;
@@ -60,16 +57,20 @@
 .sofa_light_dashboard_furniturestore_components_carttable tbody tr:hover {
     box-shadow: 0 6px 6px 0px #b8b8b899;
 }
-.sofa_light_dashboard_furniturestore_components_carttable thead tr th:nth-child(1) {
-    width: 35%;
+.sofa_light_dashboard_furniturestore_components_carttable thead tr th {
+    width: fit-content;
 }
-
-.sofa_light_dashboard_furniturestore_components_carttable tbody tr td:nth-child(1) {
+.sofa_light_dashboard_furniturestore_components_carttable thead tr th p {
+    width: 300px;
+    padding: 10px;
+    margin: 5px;
+}
+/* .sofa_light_dashboard_furniturestore_components_carttable tbody tr td {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     padding: 20px;
-}
+} */
 
 .sofa_light_dashboard_furniturestore_components_carttable tbody tr td:nth-child(1) .thumbnailDescription {
     margin-left: 30px;

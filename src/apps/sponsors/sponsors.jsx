@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 
 import './sponsors.css'
+import Sponsor from './Sponsor'
 
 function SPONSORS() {
   let checkLogin = 'check'
@@ -33,7 +34,9 @@ function SPONSORS() {
         <div className='inner-loader'></div>
       </div>
     </div>
-    <div>SPONSORS</div>
+    <>
+      <Sponsor />
+    </>
     </>
   )
 }
