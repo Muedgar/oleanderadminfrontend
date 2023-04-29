@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 
 import './admissions.css'
+import Admission from './Admission'
 
 function ADMISSIONS() {
   let checkLogin = 'check'
@@ -9,7 +10,6 @@ function ADMISSIONS() {
           await fetch("https://www.backend.oleanderschool.com/backend/api/getLoggedIn",{credentials: "include"})
           .then(d => d.json())
           .then(d => {
-              console.log(d);
               if(d.user === "Not Logged in") {
                   console.log(d, "not logged in")
                   window.location = "/"
@@ -32,7 +32,7 @@ function ADMISSIONS() {
         <div className='inner-loader'></div>
       </div>
     </div>
-    <div>ADMISSIONS</div>
+    <Admission />
     </>
   )
 }
